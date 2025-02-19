@@ -4,3 +4,5 @@ git config --global user.email raquelnunescirino@gmail.com
 Como criar projeto:
 npx create-expo-app@latest StickerSmash
 cd StickerSmash
+
+npm run reset-project
