@@ -5,4 +5,14 @@ Como criar projeto:
 npx create-expo-app@latest StickerSmash
 cd StickerSmash
 
+baixar projeto do GitHub
+npm i 
+
+resetar o template ao básico
 npm run reset-project
+
+executar o projeto na web
+npx expo start --web
+
+executar no android
+npx expo start --localhost -- android
