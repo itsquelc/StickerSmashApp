@@ -1,11 +1,11 @@
 
 import { useState } from "react";
 import { View, StyleSheet } from "react-native";
-import ImageViewer from "@/assets/components/ImageViewer";
-import Button from "@/assets/components/Button";
+import ImageViewer from "@/components/ImageViewer";
+import Button from "@/components/Button";
 import * as ImagePicker from 'expo-image-picker';
-import IconButton from "@/assets/components/IconButton";
-import CircleButton from "@/assets/components/CircleButton";
+import IconButton from "@/components/IconButton";
+import CircleButton from "@/components/CircleButton";
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
@@ -79,6 +79,15 @@ const onSaveImageAsync = () => {
     footerContainer: {
       flex: 1 / 3,
       alignItems: 'center',
-      justifyContent: 'center'
-    }
-  })
+    },
+    
+      optionsContainer:{
+        position: 'absolute',
+        bottom: 80,
+      },
+
+      optionsRow: {
+        alignItems: 'center',
+        flexDirection: 'row',
+      }
+    })
