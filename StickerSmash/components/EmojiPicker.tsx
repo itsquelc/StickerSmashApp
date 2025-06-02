@@ -1,26 +1,26 @@
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native'
-import { Children, PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 
-type Props = PropsWithChildren <{
-isVisible: boolean;
-onClose: () => void;
+type Props = PropsWithChildren<{
+    isVisible: boolean;
+    onClose: () => void;
 }>
 
-export default function EmojiPicker({isVisible, children, onClose} : Props) {
+export default function EmojiPicker({isVisible, children, onClose}: Props) {
   return (
     <View>
-      <Modal animationType='slide' transparent={true} visible={isVisible}>
-        <View style={styles.modalContent}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.title}>Escolha uma figurinhaaaaaaaaa</Text>
+        <Modal animationType='slide' transparent={true} visible={isVisible}>
+            <View style={styles.modalContent}>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.title}>Escolha uma figurinha</Text>
                     <Pressable onPress={onClose}>
                         <MaterialIcons name='close' color='#fff' size={22} />
                     </Pressable>
+                </View>
+                { children }
             </View>
-            { children }
-        </View>
-      </Modal>
+        </Modal>
     </View>
   )
 }
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     titleContainer: {
         height: '16%',
-        backgroundColor: "#464c55",    
+        backgroundColor: '#464c55',
         borderTopRightRadius: 10,
         borderTopLeftRadius: 10,
         paddingHorizontal: 20,
