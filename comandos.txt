@@ -18,3 +18,5 @@ executar no android
 npx expo start --localhost -- android
 
 npx expo install expo-image
+
+npm install dom-to-image
