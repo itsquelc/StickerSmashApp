@@ -50,7 +50,7 @@ export default function Index() {
 
         await MediaLibrary.saveToLibraryAsync(localUri);
         if (localUri) {
-          alert('Imagem Salva com Sucesso!');
+          alert('Imagem Salva!');
         }
       } catch (e) {
         console.log(e);
@@ -84,7 +84,7 @@ export default function Index() {
       setSelectedImage(result.assets[0].uri);
       setShowAppOptions(true);
     } else {
-      alert("Você não escolheu nenhuma imagem!!!");
+      alert("Você não escolheu nenhuma imagem");
     }
   }
 
@@ -108,11 +108,11 @@ export default function Index() {
       ) : (
         <View style={styles.footerContainer}>
           <Button
-            label="Escolher uma Foto"
+            label="trocar a imagem"
             theme="primary"
             onPress={pickImageAsync}
           />
-          <Button label="Usar esta Foto" onPress={() => setShowAppOptions(true)} />
+          <Button label="Usar essa imagem" onPress={() => setShowAppOptions(true)} />
         </View>
       )}
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
@@ -125,7 +125,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#2F4F4F',
     alignItems: "center",
   },
   imageContainer: {

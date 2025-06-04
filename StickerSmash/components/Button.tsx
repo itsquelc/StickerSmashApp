@@ -12,12 +12,12 @@ export default function Button({ label, theme, onPress }: Props) {
     return (
       <View style={[
         styles.buttonContainer,
-        { borderWidth: 4, borderColor: '#ffd33d', borderRadius: 18}
+        { borderWidth: 4, borderColor: '#2E8B57', borderRadius: 18}
       ]}>
-        <Pressable style={[ styles.button,{ backgroundColor: '#fff'}]}
+        <Pressable style={[ styles.button,{ backgroundColor: '#8FBC8F'}]}
           onPress={onPress}>
-          <FontAwesome name='picture-o' size={18} color='#25292e' style={{ paddingRight: 8 }} />
-          <Text style={[styles.buttonLabel, { color: '#25292e'}]}>{label}</Text>
+          <FontAwesome name='picture-o' size={18} color='#2E8B57' style={{ paddingRight: 8 }} />
+          <Text style={[styles.buttonLabel, { color: '#2E8B57'}]}>{label}</Text>
         </Pressable>
       </View>
     )
